@@ -1,0 +1,733 @@
+body {
+  font-family: "Fjalla One";
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  cursor: pointer;
+}
+
+/*////////// HEADER //////////////*/
+
+header {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border-bottom: 10px solid black;
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+}
+
+#arrow_down{
+  position:absolute;
+  left:45vw;
+  top: 85vh;
+  width:10%;
+}
+
+/*////////// NAV BURGER ///////////*/
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  right: 0;
+ background-color:black ;
+opacity:0.95;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+#burger_links {
+  position: relative;
+  top: 45%;
+  /* left: 10vw; */
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#burger_links a {
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+  display: inline;
+  margin-right: 15vh;
+  text-align: left;
+}
+
+#burger_links a:hover {
+  border-bottom: 8px solid white;
+}
+
+.cross {
+  color: white;
+  position: absolute;
+  top: 4vh;
+  left: 93vw;
+  font-size: 4em;/* NOT WORKING*/
+}
+
+
+
+/*//////////// NAV GALLERY /////////////*/
+
+.gallery_nav {
+  width: 50vw;
+  height: 17vh;
+  background-color: white;
+  float: left;
+  border-bottom: solid black 5px;
+   box-shadow: 3px 2px 14px rgba(68,68,68,0.6);
+   z-index:30;
+}
+
+.gallery_link {
+  display: block;
+  width: 20%;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  margin-left: 5vw;
+}
+
+.gallery_link:hover {
+  border-bottom: 5px solid black;
+}
+
+
+
+#tattoo_link {
+  margin-top: 3vh;
+}
+
+
+
+/* ////////////NAV SOME//////////////// */
+
+.soMe_nav {
+  width: 50vw;
+  height: 17vh;
+  background-color: white;
+  float: right;
+  border-bottom: solid black 5px;
+   box-shadow: 9px 2px 14px rgba(68,68,68,0.6);
+   z-index:30;
+}
+
+.soMe {
+  width: 30px;
+}
+
+.soMe:hover {
+  transform: scale(1.1);
+}
+
+#soMeIcons {
+
+  position: absolute;
+    width: 90px;
+    height: 100%;
+    height: auto;
+    right: 8vw;
+    padding: 7vh 1vw 1vh 2vw;
+
+}
+
+#logo {
+  display: inline;
+width: 100px;
+height: auto;
+position: absolute;
+padding: 4vh 1vw 5vh 0vh;
+right: 17vw;
+}
+
+
+
+#facebook {
+  margin-right: 1vw;
+  }
+
+#burger {
+  display:inline;
+  float:right;
+  height:100%;
+  font-size: 2.5em;
+  padding: 5vh 5vw 6vh 0vw;
+  cursor: pointer;
+
+}
+
+#burger:hover {
+  transform: scale(1.03);
+
+  cursor: pointer;
+
+}
+
+
+
+/* //////////GALLERY //////////*/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  grid-gap: 10px;
+  width: 66vw;
+  height: auto;
+  margin-left: 17vw;
+  margin-right: 17vw;
+  padding-top: 40vh;
+  min-height: 100vh;
+}
+
+.tattoo_container, .flash_container, .artwork_container {
+  text-align: center;
+}
+
+
+.flash_img, .artwork_img {
+  width: 18em;
+
+}
+
+
+
+.tattoo_img:hover {
+
+  transform: scale(1.03);
+  box-shadow: 0px 2px 14px rgba(68,68,68,0.6);
+  filter:contrast(1.2);
+  border: 5px solid yellow;
+  transition: all ease 0.2s;
+
+
+}
+
+.flash_img:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 2px 14px rgba(68,68,68,0.6);
+  filter:contrast(1.2);
+  border: 5px solid #03f7e4;
+  transition: all ease 0.2s;
+
+}
+
+.artwork_img:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 2px 14px rgba(68,68,68,0.6);
+  filter:contrast(1.2);
+  border: 5px solid #fd99fc;
+  transition: all ease 0.2s;
+
+}
+
+.tattoo_img, .flash_img, .artwork_img {
+  border: 5px solid black;
+  padding: 0;
+  margin: 0;
+  transform-origin: center;
+}
+
+.overlay_img {
+  display:none;
+    border: 5px solid black;
+  position:absolute;
+  padding: 0;
+  margin: 0;
+  background-color:black;
+}
+
+/*///////// FILTER BOX ///////////*/
+
+.filterBox {
+  top: 50vh;
+  width: 5vw;
+  height: 30vh;
+  right: 11vw;
+  background-color: black;
+  transition: width 1s ease; /* STRANGE */
+}
+
+
+.previous {
+  margin-left: 2vw;
+  margin-top: 10vh;
+}
+
+.previous, .next {
+  color: white;
+  font-size: 3em;
+  display: block;
+}
+
+.previous:hover, .next:hover{
+  color:black;
+}
+
+.next {
+  position:absolute;
+  margin-left: 27vw;
+  margin-top: 10vh;
+}
+
+.categories_tattoos {
+  position:absolute;
+  width: 60%;
+  color: white;
+  margin-left:5vw;
+  margin-top:4vw;
+}
+
+.categories_tattoos a {
+  display: block;
+  line-height: 2em;
+}
+
+.categories_tattoos a:hover {
+  border-bottom: solid 5px white;
+}
+
+/* ////////// MODAL MODAL ///////////// */
+
+.next_modal, .previous_modal{
+  color:black;
+  font-size: 4em;
+  position:absolute;
+  top:50vh;
+}
+
+.next_modal{
+  right:37vw;
+}
+
+.previous_modal{
+  right:82vw;
+}
+
+.modal_exit {
+  color:black;
+  font-size:4em;
+  position:absolute;
+  top:25vh;
+  right:13vw;
+}
+
+.modal_background {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+
+.modal_content {
+    text-align: center;
+    width:70vw;
+    height:50vh;
+    background-color: yellow;
+    margin: 25vh 15vw;
+    padding: 2em;
+}
+
+.modal_img {
+    width:40%;
+    /* height: 40%; */
+    position: fixed;
+    top: 16vh;
+    left:19vw;
+    opacity:1;
+    z-index:25;
+    border: solid 10px yellow;
+}
+
+.modal_name, .modal_description {
+    position:absolute;
+  text-align: left;
+    left: 65vw;
+
+    float:right;
+    width:20%;
+}
+
+.modal_name {
+  top: 30vh;
+  font-size: 1.7em;
+}
+
+.modal_description {
+  top: 35vh;
+  font-size:1.2em;
+}
+
+
+/*////////// INFOS PAGE ////////*/
+
+
+
+.page_section{
+  width: 80vw;
+    height: 50vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 35vh;
+    margin-bottom: 15vh;
+    box-shadow: 3px 2px 14px rgba(68,68,68,0.6);
+    background-color: white;
+
+}
+.body_otherpages{
+background-image: url(infos_background.png);
+/* background-position: center; */
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+.page_img {
+  position: absolute;
+top: 30vh;
+right: 15vw;
+width: 25vw;
+
+}
+
+.page_title {
+    font-size: 2em;
+    width: 36vw;
+    padding: 5vh 4vw 1vh 4vw;
+
+}
+
+.page_subtitle{
+  float:left;
+}
+
+.page_text p {
+  font-style: italic;
+  width: 36vw;
+  margin:0;
+
+}
+
+.page_text {
+
+    padding: 2vh 4vw;
+    width: 36vw;
+}
+
+#gallery_nav_infos, #gallery_soMe_infos{
+  position:fixed;
+  top:0;
+}
+
+#gallery_nav_infos{
+  left:0;
+}
+
+#gallery_soMe_infos{
+  right:0;
+}
+
+#mail_form {
+
+    width: 36vw;
+    position: absolute;
+    left: 40vw;
+    top: 55vh;
+
+}
+
+#contact_text p {
+  width: 20vw;
+}
+
+#contact_img {
+  top: 30vh;
+      right: 8vw;
+      width: 30vw;
+
+}
+
+
+
+/* ////////  CLASSES  ///////   */
+
+.expandFilter {
+  width: 30vw;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ////////// MOBILE VERSION /////////*/
+
+@media only screen and (max-width:480px) and (orientation:portrait) {
+    header {
+        display: none
+    }
+
+    .body_otherpages{
+      background-image: none;
+    }
+
+/* /////NAV GALLERY////// */
+
+    .gallery_nav {
+      position:fixed;
+      width: 100vw;
+      height: 8vh;
+      bottom:0;
+      border-top: 7px solid black;
+    }
+
+    .gallery_link {
+      display: inline;
+      height:100%;
+      padding: 3vh 3vw 3vh 3vw;
+      margin-left: 10vw;
+      margin-top:5vh;
+      line-height: 3em;
+    }
+
+/* ///////// NAV SOME ////////*/
+
+    .soMe_nav {
+      position:fixed;
+      width: 100vw;
+      height: 17vh;
+      border-bottom: 7px solid black;
+      background-image:url("mobile_header-14.png");
+      background-position: center;
+      background-size:cover;
+      background-repeat: no-repeat;
+      display: block;
+    }
+
+    #logo {
+      display:none;
+    }
+
+    #soMeIcons {
+      width: 60%;
+
+      padding: 0;
+      position:fixed;
+      float:right;
+      margin-left: 0vw;
+      top: 20vw;
+      height:auto;
+      left: 5vw;
+
+    }
+
+    .soMe {
+      width: 20px;
+    }
+
+    #burger {
+      position:absolute;
+      font-size: 1.5em;
+      padding:0;
+      top: 3vh;
+      left: 5vw;
+    }
+
+
+    /*////////// GALLERY ///////////*/
+
+    .gallery {
+      width: 66vw;
+      height: auto;
+      margin-left: 15vw;
+      margin-right: 15vw;
+      padding-top: 20vh;
+    }
+
+    /*////////// FILTER BOX /////////*/
+
+    .filterBox {
+      position:fixed;
+      top: 20vh;
+      width: 10vw;
+      height: 30vh;
+      right: 90vw;
+      transition:none;
+
+    }
+
+    .expandFilter {
+      width: 60vw;
+      right: 40vw;
+    }
+
+
+    .previous{
+      transform:scale(-1);
+      margin-left:0vw;
+      margin-right:2vw;
+    }
+    .next {
+
+      margin-left: 50vw;
+      transform:scale(-1);
+
+    }
+
+    .categories_tattoos {
+      width: 30vw;
+      margin-top:12vw;
+    }
+
+/*/////////// NAV BUGER //////////*/
+
+    #burger_links {
+      position: relative;
+      top: 27%;
+      left: 16vw;
+    }
+
+    #burger_links a {
+      display: block;
+      width: 35%;
+      margin-right: 15vh;
+      text-align: left;
+      line-height: 2em;
+    }
+
+
+    .cross {
+
+      top: 2vh;
+      left: 5vw;
+      font-size: 2.5em;
+    }
+
+    /*////////// INFOS PAGE ////////*/
+
+    .page_section{
+
+        height: 80vh; /* height auto if more content fetched */
+        width:86vw;
+        margin-left: 7vw;
+        margin-right:7vw;
+        margin-top: 15vh;
+        margin-bottom: 5vh;
+
+    }
+
+
+
+    .page_img { /* if height auto - re-position image */
+
+    top: 68vh;
+    right: 8vw;
+    width: 45vw;
+
+    }
+
+    .page_title {
+        font-size: 1.5em;
+        width: 80vw;
+        padding: 10vh 3vw 1vh 3vw;
+
+    }
+
+    .page_subtitle{
+      float:left;
+    }
+
+    .page_text p {
+
+      width: 70vw;
+      margin:0;
+
+    }
+
+    .page_text {
+
+        padding: 2vh 4vw;
+        width: 36vw;
+    }
+
+    #contact_text {
+    width: 60vw;
+}
+
+#mail_form {
+
+    left: 10vw;
+    top: 70vh;
+}
+
+    /* ////////// MODAL MODAL ///////////// */
+
+    .next_modal, .previous_modal{
+      color:black;
+      font-size: 4em;
+      position:absolute;
+      top:50vh;
+    }
+
+    .modal_name {
+        top: 67vh;
+        font-size: 1.2em;
+    }
+
+    .modal_exit {
+
+      font-size:3em;
+
+      top:25vh;
+      right:13vw;
+    }
+
+    .modal_content {
+      width: 90vw;
+      height: 50vh;
+      margin: 28vh 5vw;
+      padding: 0em;
+    }
+
+    .modal_img {
+      width: 80%;
+      top: 24vh;
+      left: 7vw;
+    }
+
+    .modal_name, .modal_description {
+
+    left: 10vw;
+
+    width: 70%;
+}
+
+.modal_description {
+    top: 71vh;
+    font-size: 1.2em;
+}
+
+.modal_exit {
+    font-size: 3em;
+    top: 66vh;
+    right: 13vw;
+}
+
+
+
+
+  }

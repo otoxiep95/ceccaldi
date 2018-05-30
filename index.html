@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find your personal custom TATTOO, or choose from the many flashes CECCALDI colection, going from minimalistic to psychedelic. CECCALDI invites you to explore his ART and share his vision and inspirations.">
+    <meta name="keywords" content="Tattoo,Flash,Art,artwork,psychedelic,minimal,paris,ceccaldi,foscaceccaldi,taro,illustration,blackink,color,colored,">
+    <title>CECCALDI - TATTOOS - FLASH - ARTWORK</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+</head>
+
+
+<body>
+    <header>
+
+        <video preload="auto" autoplay> <source src="img/video_frontpage_ceccaldi.mp4" type="video/mp4"></video>
+
+
+
+<a href="#gallery_section">
+        <img id="arrow_down" src="img/arrow_down-02.png" alt="down" />
+</a>
+    </header>
+
+
+
+    <nav class="gallery_nav">
+        <a class="gallery_link" id="tattoo_link">TATTOO</a>
+        <a class="gallery_link" id="flash_link">FLASH</a>
+        <a class="gallery_link" id="artwork_link">ARTWORK</a>
+    </nav>
+
+    <nav class="soMe_nav">
+
+<a href="about.html">
+        <img id=logo  src="img/logo-13.png" alt="CECCALDI" />
+</a>
+
+        <span id="burger" onclick="openNav()">&#9776;</span>
+
+
+
+        <div id="soMeIcons">
+
+            <img id="facebook" class="soMe" src="img/31880688_10216415407194747_7848217400955633664_n.png" alt="">
+            <img id="insta" class="soMe" src="img/31900180_10216415407274749_4473944454444613632_n.png" alt="">
+
+        </div>
+
+    </nav>
+
+
+
+
+    <section class="gallery tattoo_gallery" id="gallery_section">
+    </section>
+    <section class="gallery flash_gallery hidden">
+    </section>
+    <section class="gallery artwork_gallery hidden">
+    </section>
+
+
+
+
+
+    <div class="filterBox">
+        <a class="previous"> &#60; </a>
+        <a class="next hidden"> &#62; </a>
+
+        <div class="categories_tattoos hidden">
+            <a id="blackWhite"> BLACK &amp; WHITE</a>
+            <a id="colored"> COLORED </a>
+            <a id="collaboration"> COLLABORATION </a>
+            <a id="freeHand"> FREE HAND </a>
+            <a id="all"> ALL </a>
+        </div>
+    </div>
+
+
+    <!-- MODAL MODAL -->
+
+    <div class="modal_background hidden">
+        <aside class="modal_content">
+
+            <img class="modal_img" src="" alt="img prdct">
+            <h2 class="modal_name"> PRODUCT </h2>
+            <p class="modal_description"> description </p>
+
+            <a class="next_modal"> &#62; </a>
+
+            <a class="previous_modal"> &#60 </a>
+
+            <a class="modal_exit">&times;</a>
+
+        </aside>
+    </div>
+
+    <!-- BURGER MENU -->
+
+    <div id="burger_nav" class="overlay">
+
+        <div id="burger_links">
+
+            <a href="index.html"> GALLERY </a>
+            <a href="infos.html"> INFOS </a>
+            <a href="about.html"> ABOUT </a>
+            <a href="contact.html"> CONTACT </a>
+
+        </div>
+        <a class="cross" onclick="closeNav()">&times;</a>
+    </div>
+
+    <!--TEMPLATES -->
+
+    <template id="tattoo_temp">
+        <article class="tattoo_container">
+                <img class="tattoo_img" alt="ceccaldi_tattoo">
+        </article>
+    </template>
+
+    <template id="flash_temp">
+        <article class="flash_container">
+            <img class="flash_img" src="" alt="ceccaldi_flash">
+        </article>
+    </template>
+
+    <template id="artwork_temp">
+      <article class="artwork_container">
+            <img class="artwork_img" src="" alt="ceccaldi_artwork" />
+      </article>
+
+    </template>
+
+
+    <script src="js/fetching_modal.js" type="text/javascript"></script>
+    <script src="js/menu.js" type="text/javascript"></script>
+</body>
+
+</html>
