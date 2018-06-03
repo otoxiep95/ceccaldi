@@ -4,7 +4,7 @@ var filterBox = document.querySelector('.filterBox');
 
 
 
-
+////////// BURGER MENU FUNCS //////////
 
 function openNav() {
     document.getElementById("burger_nav").style.width = "100%";
@@ -56,7 +56,7 @@ if (window.innerWidth > 480) {
 
 
 
-///////////////////////// FILTER BOX ////////////////////////
+///////////////////////// FILTER FUNCS ////////////////////////
 let previous = document.querySelector(".previous");
 let next = document.querySelector(".next");
 let categories_tattoos = document.querySelector(".categories_tattoos");
@@ -147,7 +147,7 @@ function showAll(){
     });
 }
 
-
+//////// FILTER BOX /////////////
 
 function openFilter() {
     console.log(" open filter");

@@ -19,6 +19,10 @@ tattoo_link.addEventListener('click', displayTattoos);
 flash_link.addEventListener('click', displayFlash);
 artwork_link.addEventListener('click', displayArtwork);
 
+let video = document.querySelector("video");
+
+//video.play();
+
 
 ////////////////// FETCHING TATTOOS ///////////////////////
 
@@ -67,6 +71,7 @@ function showSingleTattoo(aTattoo) {
         cloneTat.querySelector(".tattoo_container").classList.add("freeHandCat");
     }
 
+    /////// FETCHING MODAL ////////
     cloneTat.querySelector(".tattoo_container").addEventListener("click", () => {
         fetch("http://ceccaldi.albertopachecommd.com/wp-json/wp/v2/tattoos/" + aTattoo.id + "?_embed&").then(res => res.json()).then(product => showModal(product));
     });
@@ -97,7 +102,7 @@ function showSingleFlash(aFlash) {
     } else { // no img
         cloneFlash.querySelector(".flash_img").remove()
     }
-
+    /////// FETCHING MODAL ////////
     cloneFlash.querySelector(".flash_container").addEventListener("click", () => {
         fetch("http://ceccaldi.albertopachecommd.com/wp-json/wp/v2/flash/" + aFlash.id + "?_embed&").then(res => res.json()).then(product => showModal(product));
     });
@@ -149,7 +154,7 @@ function showSingleArtwork(anArtwork) {
         } else { // no img
             cloneArtwork.querySelector(".artwork_img").remove()
         }
-
+    /////// FETCHING MODAL ////////
         cloneArtwork.querySelector(".artwork_container").addEventListener("click", () => {
             fetch("http://ceccaldi.albertopachecommd.com/wp-json/wp/v2/artwork/" + anArtwork.id + "?_embed&").then(res => res.json()).then(product => showModal(product));
         });
@@ -157,6 +162,7 @@ function showSingleArtwork(anArtwork) {
     artwork_gallery_list.appendChild(cloneArtwork);
 }
 
+/////// DISPLAY SECTIONS FUNCS ///////
 function displayTattoos() {
     tattoo_gallery_list.classList.remove("hidden");
     flash_gallery_list.classList.add("hidden");
@@ -190,6 +196,7 @@ function displayArtwork() {
       tattoo_link.style.borderBottom="none";
 }
 
+ /////// FILTER RESET FUNC ////////
 function showAll(){
   let articlesTattoo = document.querySelectorAll(".tattoo_container");
     let articlesFlash = document.querySelectorAll(".flash_container");
@@ -244,24 +251,3 @@ function showModal(aModal) {
 
 
 }
-
-// // BOTTOM LOADING //
-//
-// setInterval(function () {
-//
-//     if (bottomVisible() && lookingForData === false) {
-//         page++;
-//         fetchTattoos();
-//     }
-// }, 100) // 0.1sec
-//
-// // && = and - we want both things true
-// // || = or
-//
-// function bottomVisible() {
-//     const scrollY = window.scrollY;
-//     const visible = document.documentElement.clientHeight;
-//     const pageHeight = document.documentElement.scrollHeight;
-//     const bottomOfPage = visible + scrollY >= pageHeight;
-//     return bottomOfPage || pageHeight < visible;
-// }
